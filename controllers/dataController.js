@@ -1,3 +1,5 @@
+// HW2 logic implemented by Katherine Mendez
+
 const CityData = require('../models/dataModel');
 
 // 🔧 CRUD Operations
