@@ -1,62 +1,42 @@
 # HW2: RESTful API with Node.js, Express, and MongoDB
 
-## Author
-Katherine Mendez  
-Homework #2 — RESTful API  
-Fall 2025
+## Repository
+[https://github.com/kmendez2707/hw2-api](https://github.com/kmendez2707/hw2-api)
 
----
+## Description
+This project implements a RESTful API for analyzing housing project data using Node.js, Express, and MongoDB. It includes full CRUD functionality and 8 analytical endpoints based on the professor’s specifications.
 
-## Overview
-This project implements a RESTful API using Node.js, Express, and MongoDB. It allows users to create, retrieve, and delete messages via HTTP requests. Built for Homework #2 in CS course, following lecture notes and best practices.
-
-## Technologies
+## Technologies Used
 - Node.js
 - Express
 - MongoDB
 - Mongoose
-- dotenv
-- nodemon
+- Git & GitHub
 
-## Installation
+## Analytical Endpoints
+- `GET /api/questions/average-units` — Average units per project
+- `GET /api/questions/most-projects-ward` — Ward with most projects
+- `GET /api/questions/total-affordable-units` — Total affordable units
+- `GET /api/questions/under-construction-count` — Projects under construction
+- `GET /api/questions/most-frequent-agency` — Most frequent agency
+- `GET /api/questions/median-units` — Median units per project
+- `GET /api/questions/projects-over-100` — Projects with more than 100 units
+- `GET /api/questions/highest-average-ward` — Ward with highest average units per project
 
-1. Clone the repo or download the project folder.
-2. Install dependencies:
+## CRUD Routes
+- `POST /api/data` — Add new project
+- `GET /api/data` — Get all projects
+- `GET /api/data/:id` — Get project by ID
+- `PUT /api/data/:id` — Update project
+- `DELETE /api/data/:id` — Delete project
 
-   ```bash
-   npm install
+## Testing
+All endpoints tested using Postman, Jest or curl. MongoDB seeded with sample data via `scripts/seed.js`.
 
+## Author
+Katherine Mendez  
+GitHub: [@kmendez2707](https://github.com/kmendez2707)
+UCFID: 5337290
+---
 
-3. Create a `.env` file in the root directory:
-
-   ```env
-   MONGO_URI=mongodb://localhost:27017/hw2db
-   PORT=3000
-
-4. Start MongoDB:
-   /usr/local/mongodb/mongodb-macos-x86_64-6.0.13/bin/mongod --dbpath ~/mongodb-data
-
-5. Start the server:
-   npm run dev
-
-6. API Endpoints
-   GET /api/messages
-   Returns all saved messages.
-
-   POST /api/messages
-   Creates a new message. Example:
-   {
-  "name": "Katherine",
-  "email": "kat@example.com",
-  "message": "This is my first message!"
-}
-   
-   DELETE /api/messages/:id
-   Deletes a message by its MongoDB _id.
-
-7. Example Usage:
-   curl http://localhost:3000/api/messages
-curl -X POST http://localhost:3000/api/messages \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Katherine","email":"kat@example.com","message":"Hello!"}'
-curl -X DELETE http://localhost:3000/api/messages/<id>
+Let me know once you’ve updated the file — I’ll help you double-check your submission checklist and celebrate the finish line!
